@@ -42,7 +42,7 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body class="bg-light">
+	<body class="bg-light d-flex flex-column min-vh-100">
 		<header>
 			<nav class="navbar bg-body-tertiary border-bottom border-2">
 				<div class="container-fluid">
@@ -52,8 +52,38 @@
 				</div>
 			</nav>
 		</header>
-		<main></main>
-		<footer class="container text-center fw-medium text-secondary">
+		<main class="flex-grow-1">
+			<section
+				id="form-section"
+				class="container py-5"
+				style="max-width: 720px"
+			>
+				<div class="fs-4 mb-3" id="output"></div>
+				<form>
+					<div class="form-group">
+						<label class="form-label" for="input"
+							>Enter a number:</label
+						>
+						<input
+							class="form-control"
+							type="number"
+							id="number"
+							placeholder="E.g. 20"
+							min="1"
+							max="3999"
+						/>
+					</div>
+					<button
+						class="btn btn-primary mt-3"
+						type="button"
+						id="convert-btn"
+					>
+						Convert
+					</button>
+				</form>
+			</section>
+		</main>
+		<footer class="container text-center fw-medium text-secondary mt-auto">
 			<p>
 				&copy;
 				<script>
